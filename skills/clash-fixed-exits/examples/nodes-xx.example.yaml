@@ -1,0 +1,18 @@
+# <code> fixed-exit nodes -> provider nodes-<code> / group 固定<label> / port 127.0.0.1:<port>
+# Real files contain secrets: keep out of shared folders and version control.
+# Copy whole entries from dev\clash\vps-<ip>.yaml (proxies:). Names must be unique in this file.
+proxies:
+  - name: VPS-XX-EXAMPLE-v4
+    type: vless
+    server: 203.0.113.10          # placeholder (TEST-NET-3)
+    port: 443
+    uuid: <UUID-FROM-vps-ip.yaml>
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.amd.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: <REALITY-PUBLIC-KEY>
+      short-id: <SHORT-ID>
